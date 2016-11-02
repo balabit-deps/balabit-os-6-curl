@@ -1,3 +1,56 @@
+curl (7.47.0-1ubuntu2.2) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Incorrect reuse of client certificates with NSS
+    - debian/patches/CVE-2016-7141.patch: refuse previously loaded
+      certificate from file in lib/vtls/nss.c.
+    - CVE-2016-7141
+  * SECURITY UPDATE: curl escape and unescape integer overflows
+    - debian/patches/CVE-2016-7167.patch: deny negative string length
+      inputs in lib/escape.c.
+    - CVE-2016-7167
+  * SECURITY UPDATE: cookie injection for other servers
+    - debian/patches/CVE-2016-8615.patch: ignore lines that are too long in
+      lib/cookie.c.
+    - CVE-2016-8615
+  * SECURITY UPDATE: case insensitive password comparison
+    - debian/patches/CVE-2016-8616.patch: use case sensitive user/password
+      comparisons in lib/url.c.
+    - CVE-2016-8616
+  * SECURITY UPDATE: OOB write via unchecked multiplication
+    - debian/patches/CVE-2016-8617.patch: check for integer overflow on
+      large input in lib/base64.c.
+    - CVE-2016-8617
+  * SECURITY UPDATE: double-free in curl_maprintf
+    - debian/patches/CVE-2016-8618.patch: detect wrap-around when growing
+      allocation in lib/mprintf.c.
+    - CVE-2016-8618
+  * SECURITY UPDATE: double-free in krb5 code
+    - debian/patches/CVE-2016-8619.patch: avoid realloc in lib/security.c.
+    - CVE-2016-8619
+  * SECURITY UPDATE: glob parser write/read out of bounds
+    - debian/patches/CVE-2016-8620.patch: stay within bounds in
+      src/tool_urlglob.c.
+    - CVE-2016-8620
+  * SECURITY UPDATE: curl_getdate read out of bounds
+    - debian/patches/CVE-2016-8621.patch: handle cut off numbers better in
+      lib/parsedate.c, added tests to tests/data/test517,
+      tests/libtest/lib517.c.
+    - CVE-2016-8621
+  * SECURITY UPDATE: URL unescape heap overflow via integer truncation
+    - debian/patches/CVE-2016-8622.patch: avoid integer overflow in
+      lib/dict.c, lib/escape.c, update docs/libcurl/curl_easy_unescape.3.
+    - CVE-2016-8622
+  * SECURITY UPDATE: Use-after-free via shared cookies
+    - debian/patches/CVE-2016-8623.patch: hold deep copies of all cookies
+      in lib/cookie.c, lib/cookie.h, lib/http.c.
+    - CVE-2016-8623
+  * SECURITY UPDATE: invalid URL parsing with #
+    - debian/patches/CVE-2016-8624.patch: accept # as end of host name in
+      lib/url.c.
+    - CVE-2016-8624
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 02 Nov 2016 14:24:49 -0400
+
 curl (7.47.0-1ubuntu2.1) xenial-security; urgency=medium
 
   * SECURITY UPDATE: TLS session resumption client cert bypass
