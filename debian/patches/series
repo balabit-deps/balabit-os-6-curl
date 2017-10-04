@@ -19,6 +19,12 @@ CVE-2016-8621.patch
 CVE-2016-8622.patch
 CVE-2016-8623.patch
 CVE-2016-8624.patch
+CVE-2016-9586.patch
+CVE-2017-1000100.patch
+CVE-2017-1000101.patch
+CVE-2017-1000254.patch
+CVE-2017-7407-1.patch
+CVE-2017-7407-2.patch
 
 # do not add patches below
 90_gnutls.patch

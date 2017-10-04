@@ -1,3 +1,35 @@
+curl (7.47.0-1ubuntu2.3) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: printf floating point buffer overflow
+    - debian/patches/CVE-2016-9586.patch: fix floating point buffer
+      overflow issues in lib/mprintf.c, added test to tests/data/test557,
+      tests/libtest/lib557.c.
+    - CVE-2016-9586
+  * SECURITY UPDATE: TFTP sends more than buffer size
+    - debian/patches/CVE-2017-1000100.patch: reject file name lengths that
+      don't fit in lib/tftp.c.
+    - CVE-2017-1000100
+  * SECURITY UPDATE: URL globbing out of bounds read
+    - debian/patches/CVE-2017-1000101.patch: do not continue parsing after
+      a strtoul() overflow range in src/tool_urlglob.c, added test to
+      tests/data/Makefile.inc, tests/data/test1289.
+    - CVE-2017-1000101
+  * SECURITY UPDATE: FTP PWD response parser out of bounds read
+    - debian/patches/CVE-2017-1000254.patch: zero terminate the entry path
+      even on bad input in lib/ftp.c, added test to
+      tests/data/Makefile.inc, tests/data/test1152.
+    - CVE-2017-1000254
+  * SECURITY UPDATE: --write-out out of buffer read
+    - debian/patches/CVE-2017-7407-1.patch: fix a buffer read overrun in
+      src/tool_writeout.c added test to tests/data/Makefile.inc,
+      tests/data/test1440, tests/data/test1441.
+    - debian/patches/CVE-2017-7407-2.patch: check for end of input in
+      src/tool_writeout.c added test to tests/data/Makefile.inc,
+      tests/data/test1442.
+    - CVE-2017-7407
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 04 Oct 2017 08:52:42 -0400
+
 curl (7.47.0-1ubuntu2.2) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Incorrect reuse of client certificates with NSS
