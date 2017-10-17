@@ -1,3 +1,11 @@
+curl (7.47.0-1ubuntu2.4) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: IMAP FETCH response out of bounds read
+    - debian/patches/CVE-2017-1000257.patch: check size in lib/imap.c.
+    - CVE-2017-1000257
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 17 Oct 2017 13:53:46 -0400
+
 curl (7.47.0-1ubuntu2.3) xenial-security; urgency=medium
 
   * SECURITY UPDATE: printf floating point buffer overflow
