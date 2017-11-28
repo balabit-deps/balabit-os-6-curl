@@ -1,3 +1,17 @@
+curl (7.47.0-1ubuntu2.5) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: NTLM buffer overflow via integer overflow
+    - debian/patches/CVE-2017-8816.patch: avoid integer overflow for malloc
+      size in lib/curl_ntlm_core.c
+    - CVE-2017-8816
+  * SECURITY UPDATE: FTP wildcard out of bounds read
+    - debian/patches/CVE-2017-8817.patch: fix heap buffer overflow in
+      setcharset in lib/curl_fnmatch.c, added tests to
+      tests/data/Makefile.inc, tests/data/test1163.
+    - CVE-2017-8817
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 28 Nov 2017 08:03:58 -0500
+
 curl (7.47.0-1ubuntu2.4) xenial-security; urgency=medium
 
   * SECURITY UPDATE: IMAP FETCH response out of bounds read

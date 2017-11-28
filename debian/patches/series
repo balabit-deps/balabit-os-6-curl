@@ -26,6 +26,8 @@ CVE-2017-1000254.patch
 CVE-2017-7407-1.patch
 CVE-2017-7407-2.patch
 CVE-2017-1000257.patch
+CVE-2017-8816.patch
+CVE-2017-8817.patch
 
 # do not add patches below
 90_gnutls.patch
