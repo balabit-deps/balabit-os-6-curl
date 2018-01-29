@@ -1,3 +1,18 @@
+curl (7.47.0-1ubuntu2.6) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Out of bounds read in code handling HTTP/2
+    - debian/patches/CVE-2018-1000005.patch: fix incorrect
+      trailer buffer size in lib/http2.c.
+    - CVE-2018-1000005
+  * SECURITY UPDATE: leak authentication data
+    - debian/patches/CVE-2018-1000007.patch: prevent custom
+      authorization headers in redirects in lib/http.c,
+      lib/url.c, lib/urldata.h, tests/data/Makefile.in,
+      tests/data/test317, tests/data/test318.
+    - CVE-2018-1000007
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Mon, 29 Jan 2018 16:06:08 -0300
+
 curl (7.47.0-1ubuntu2.5) xenial-security; urgency=medium
 
   * SECURITY UPDATE: NTLM buffer overflow via integer overflow
