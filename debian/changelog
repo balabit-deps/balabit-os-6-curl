@@ -1,3 +1,28 @@
+curl (7.47.0-1ubuntu2.7) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: FTP path trickery leads to NIL byte OOB write
+    - debian/patches/CVE-2018-1000120-pre1.patch: avoid using
+      curl_easy_unescape() internally in lib/ftp.c.
+    - debian/patches/CVE-2018-1000120-pre2.patch: URL decode path for dir
+      listing in nocwd mode in lib/ftp.c, add test to tests/*.
+    - debian/patches/CVE-2018-1000120-pre3.patch: remove dead code in
+      ftp_done in lib/ftp.c.
+    - debian/patches/CVE-2018-1000120-pre4.patch: don't clobber the passed
+      in error code in lib/ftp.c.
+    - debian/patches/CVE-2018-1000120.patch: reject path components with
+      control codes in lib/ftp.c, add test to tests/*.
+    - CVE-2018-1000120
+  * SECURITY UPDATE: LDAP NULL pointer dereference
+    - debian/patches/CVE-2018-1000121.patch: check ldap_get_attribute_ber()
+      results for NULL before using in lib/openldap.c.
+    - CVE-2018-1000121
+  * SECURITY UPDATE: RTSP RTP buffer over-read
+    - debian/patches/CVE-2018-1000122.patch: make sure excess reads don't
+      go beyond buffer end in lib/transfer.c.
+    - CVE-2018-1000122
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 14 Mar 2018 09:04:46 -0400
+
 curl (7.47.0-1ubuntu2.6) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Out of bounds read in code handling HTTP/2
