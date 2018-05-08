@@ -37,6 +37,7 @@ CVE-2018-1000120-pre4.patch
 CVE-2018-1000120.patch
 CVE-2018-1000121.patch
 CVE-2018-1000122.patch
+CVE-2018-1000301.patch
 
 # do not add patches below
 90_gnutls.patch

@@ -1,3 +1,12 @@
+curl (7.47.0-1ubuntu2.8) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: RTSP bad headers buffer over-read
+    - debian/patches/CVE-2018-1000301.patch: restore buffer pointer when
+      bad response-line is parsed in lib/http.c.
+    - CVE-2018-1000301
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 08 May 2018 13:52:59 -0400
+
 curl (7.47.0-1ubuntu2.7) xenial-security; urgency=medium
 
   * SECURITY UPDATE: FTP path trickery leads to NIL byte OOB write
