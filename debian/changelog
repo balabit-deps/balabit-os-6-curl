@@ -1,3 +1,12 @@
+curl (7.47.0-1ubuntu2.9) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: Buffer overrun
+    - debian/patches/CVE-2018-14618.patch: fix in
+      lib/curl_ntlm_core.c.
+    - CVE-2018-14618
+
+ -- Leonidas S. Barbosa <leo.barbosa@canonical.com>  Thu, 13 Sep 2018 09:13:35 -0300
+
 curl (7.47.0-1ubuntu2.8) xenial-security; urgency=medium
 
   * SECURITY UPDATE: RTSP bad headers buffer over-read
