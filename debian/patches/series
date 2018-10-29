@@ -38,8 +38,12 @@ CVE-2018-1000120.patch
 CVE-2018-1000121.patch
 CVE-2018-1000122.patch
 CVE-2018-1000301.patch
+CVE-2018-14618.patch
+CVE-2018-16839-pre1.patch
+CVE-2018-16839-pre2.patch
+CVE-2018-16839.patch
+oob-read.patch
 
 # do not add patches below
-CVE-2018-14618.patch
 90_gnutls.patch
 99_nss.patch

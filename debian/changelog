@@ -1,3 +1,18 @@
+curl (7.47.0-1ubuntu2.11) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: SASL password overflow via integer overflow
+    - debian/patches/CVE-2018-16839-pre1.patch: prevent size overflows in
+      lib/curl_sasl.c.
+    - debian/patches/CVE-2018-16839-pre2.patch: fix integer overflow check
+      in lib/curl_ntlm_core.c, lib/curl_setup.h, lib/curl_sasl.c.
+    - debian/patches/CVE-2018-16839.patch: fix check in lib/curl_sasl.c.
+    - CVE-2018-16839
+  * SECURITY UPDATE: warning message out-of-buffer read
+    - debian/patches/oob-read.patch: fix bad arithmetic in src/tool_msgs.c.
+    - CVE number pending
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 29 Oct 2018 08:13:39 -0400
+
 curl (7.47.0-1ubuntu2.9) xenial-security; urgency=medium
 
   * SECURITY UPDATE: Buffer overrun
