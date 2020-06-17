@@ -1,3 +1,12 @@
+curl (7.47.0-1ubuntu2.15) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: curl overwrite local file with -J
+    - debian/patches/CVE-2020-8177.patch: -i is not OK if -J is used in
+      src/tool_cb_hdr.c, src/tool_getparam.c.
+    - CVE-2020-8177
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 17 Jun 2020 09:21:55 -0400
+
 curl (7.47.0-1ubuntu2.14) xenial-security; urgency=medium
 
   * SECURITY UPDATE: double-free when using kerberos over FTP may cause
